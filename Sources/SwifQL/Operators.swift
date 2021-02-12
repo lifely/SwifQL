@@ -371,5 +371,7 @@ extension SwifQLPartOperator {
 }
 
 extension String {
-    fileprivate var `operator`: SwifQLPartOperator { .init(self) }
+
+    public  var `operator`: SwifQLPartOperator { .init(self) }
+
 }

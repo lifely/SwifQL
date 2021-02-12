@@ -12,7 +12,7 @@ public typealias SwifQLBool = SwifQLPartBool
 public struct SwifQLPartBool: SwifQLPart, SwifQLable {
     public var parts: [SwifQLPart] { [self] }
     
-    let value: Bool
+    public let value: Bool
     
     public init (_ value: Bool) {
         self.value = value

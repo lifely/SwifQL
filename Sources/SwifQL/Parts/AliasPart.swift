@@ -8,7 +8,7 @@
 import Foundation
 
 public struct SwifQLPartAlias: SwifQLPart {
-    var alias: String
+    public var alias: String
     
     init (_ alias: String) {
         self.alias = alias

@@ -8,7 +8,7 @@
 import Foundation
 
 public struct SwifQLPartSafeValue: SwifQLPart {
-    var safeValue: Any?
+    public var safeValue: Any?
     
     public init (_ value: Any?) {
         safeValue = value
