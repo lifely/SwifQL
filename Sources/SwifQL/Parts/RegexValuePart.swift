@@ -102,12 +102,12 @@ public func =~ (lhs: SwifQLable, rhs: [SwifQLable]) -> SwifQLable {
 infix operator !~ : ComparisonPrecedence
 public func !~ (lhs: SwifQLable, rhs: SwifQLable) -> SwifQLable {
   let regex = SwifQLRegex(rhs)
-  return SwifQLPredicate(operator: .regexMatch, lhs: lhs, rhs: regex)
+  return SwifQLPredicate(operator: .regexNotMatch, lhs: lhs, rhs: regex)
 }
 
 public func !~ (lhs: SwifQLable, rhs: [SwifQLable]) -> SwifQLable {
   let regex = SwifQLRegex(rhs.insert(separator: SwifQLPartOperator.pipe))
-  return SwifQLPredicate(operator: .regexMatch, lhs: lhs, rhs: regex)
+  return SwifQLPredicate(operator: .regexNotMatch, lhs: lhs, rhs: regex)
 }
 
 infix operator |: AdditionPrecedence
